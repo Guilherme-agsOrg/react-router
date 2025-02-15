@@ -2,6 +2,7 @@ import MenuPrincipal from "./MenuPrincipal";
 import Cabecalho from "./Cabecalho";
 import Conteudo from "./Conteudo";
 import Flex from "./Flex";
+import { Outlet } from "react-router";
 
 interface LayoutProps {
     titulo?: string;
@@ -20,7 +21,7 @@ export default function Layout(props: LayoutProps) {
             <MenuPrincipal />
             <Flex col className={`flex-1 p-5`}>
                 <Cabecalho titulo={props.titulo} subtitulo={props.subtitulo} />
-                <Conteudo></Conteudo>
+                <Conteudo><Outlet/></Conteudo>
             </Flex>
         </div>
     );
