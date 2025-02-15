@@ -1,7 +1,6 @@
 import { NavLink } from "react-router-dom";
 
 export default function MenuInterno(props) {
-    console.log(props)
     const formatacaoLink = (isActive) => {
         return `hover:bg-zinc-800 
                 text-lg font-bold text-zinc-300 hover:text-orange-500
